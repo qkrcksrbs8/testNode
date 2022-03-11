@@ -36,31 +36,14 @@ const conversionDate = (date) => {
 }
 
 
-const defaultTime = '3600000'// 매장 게임 기본 시간
-const minTime = 1000 * 60 * 10;
-
 const test = () => {
 
     const moment = require('moment-timezone');//npm i moment-timezone
-    const now = moment().utc(false);
 
-    const start = moment(now).utc(true).tz('Asia/Seoul').format("YYYY-MM-DD HH:mm:ss");
-    console.log(start);
-
-    // let bookings = store.booking;
-    // if (!bookings) return console.log('bookings 0');
-
-
-
-    // let size = bookings.length > 4? 4 : bookings.length;
-    // if (size )
-    //
-    //
-    // console.log('shortStart ',shortStart)
-    // console.log('shortEnd ',shortEnd)
-    // console.log('pullStart ',pullStart)
-    // console.log('pullEnd', pullEnd)
-
+    const kr_time = moment().utc(false).tz('Asia/Seoul').format("YYYY-MM-DD HH:mm:ss");
+    const ur_time = moment().utc(false).tz('Europe/Rondon').format("YYYY-MM-DD HH:mm:ss");
+    console.log(kr_time);
+    console.log(ur_time);
 }
 
 test();
